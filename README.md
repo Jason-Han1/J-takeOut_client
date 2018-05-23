@@ -1,4 +1,4 @@
-# day01
+
 ## 1. 项目开发准备
     项目描述
     技术选型
@@ -25,11 +25,11 @@
 ## 4. 抽取组件
     头部组件: HeaderTop, 通过slot来实现组件通信标签结构
     商家列表组件: ShopList
-    
+
 ## 5. 登陆路由组件
      静态组件
      FooterGuide的显示/隐藏: 通过路由的meta
-     
+
 ## 6. 后台项目
     启动后台项目: 理解前后台分离
     测试后台接口: 使用postman
@@ -41,16 +41,15 @@
     接口请求函数封装: 每个后台接口
 
 
-# day02
 ## 1. 异步数据
-    封装ajax: 
+    封装ajax:
         promise+axios封装ajax请求的函数
         封装每个接口对应的请求函数(能根据接口定义ajax请求函数)
         解决ajax的跨越域问题: 配置代理, 对代理的理解
     vuex编码
         创建所有相关的模块: store/index|state|mutations|actions|getters|mutation-types
         设计state: 从后台获取的数据
-        实现actions: 
+        实现actions:
             定义异步action: async/await
             流程:　发ajax获取数据, commit给mutation
         实现mutations: 给状态赋值
@@ -69,17 +68,17 @@
         对数据进行整合计算(一维变为特定的二维数组)
         使用Swiper显示轮播, 如何在界面更新之后创建Swiper对象?
             1). 使用回调+$nextTick()
-            2). 使用watch+$nextTick()	
-    		
+            2). 使用watch+$nextTick()
+
 ## 2. 登陆/注册: 界面相关效果
     a. 切换登陆方式
     b. 手机号合法检查
     c. 倒计时效果
     d. 切换显示或隐藏密码
     g. 前台验证提示
-    
+
 ## 3. 前后台交互相关问题
-    1). 如何查看你的应用是否发送某个ajax请求?  
+    1). 如何查看你的应用是否发送某个ajax请求?
         浏览器的network
     2). 发ajax请求404
         请求的路径的对
@@ -88,8 +87,8 @@
     3). 后台返回了数据, 但页面没有显示?
         vuex中是否有
         组件中是否读取
-        
-# day03
+
+
 ## 1. 完成登陆/注册功能
     1). 2种方式
        手机号/短信验证码登陆
@@ -108,7 +107,7 @@
        使用vue的chrome插件查看vuex中的state和组件中的数据
        使用debugger语句调试代码
        实参类型与形参类型的匹配问题
-       
+
 ## 2. 搭建商家整体界面
     1). 拆分界面路由
     2). 路由的定义/配置|使用
@@ -117,7 +116,7 @@
     1). 前后台分离的理解
     2). mockjs的理解和使用
     3). jons数据设计的理解
-     
+
 ## 4. ShopHeader组件
     1). 异步显示数据效果的编码流程
         ajax
@@ -136,12 +135,12 @@
         情况1: Cannot read property 'xxx' of undefined"
         原因: 初始值是空对象, 内部没有数据, 而模块中直接显示3层表达式
         解决: 使用v-if指令
-        
+
         情况2: Cannot read property 'xxx' of null"
-     
+
     3). vue transition动画
-    
-# day04
+
+
 ## 1. ShopGoods组件
     1). 动态展现列表数据
     2). 基本滑动:
@@ -169,14 +168,14 @@
             2. 列表第一次显示后, 收集tops
             3. 实现currentIndex的计算逻辑
     4). 点击左侧列表项, 右侧滑动到对应位置
-    
+
 ## 2. CartControl组件
     1). 问题: 更新状态数据, 对应的界面不变化
         原因: 一般方法给一个已有绑定的对象中添加一个新的属性, 这个属性没有数据绑定
-        解决: 
+        解决:
             Vue.set(obj, 'xxx', value)才有数据绑定
             this.$set(obj, 'xxx', value)才有数据绑定
-            
+
 ## 3. ShopCart组件
     1). 使用vuex管理购物项数据: cartFoods
     2). 解决几个功能性bug
